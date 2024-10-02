@@ -2,13 +2,73 @@
 @import url("https://use.typekit.net/bkw0dsg.css");
 
 html {
+    font-size: 16px; /* set default font size for rem sizing */
+    font-family: "bree-serif", serif;
     height: 100%;
 }
 
 body {
     height: 100%;
     margin: 0;
-    background: linear-gradient (45deg, pink, teal);
-    
-    
+    background: #557289;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #577289, #90C1D4, #90C1D4, #577289);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #577289, #90C1D4, #90\, #577289); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+/* font settings */
+p {
+    font-size: 1rem;
+    font-family: "bree-serif", serif;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul li a{
+    font-size: .75rem;
+    font-family: "bree-serif", serif;
+    font-weight: 400;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-family: "bree-serif", serif;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+}
+
+h2 {
+    font-family: "bree-serif", serif;
+    font-weight: 400;
+    font-size: 1.125rem;
+    text-align: center;
+    color: #875539;
+    margin: 10px 0 5px;
+}
+
+h3 {
+    font-family: "bree-serif", serif;
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: center;
+    color: #ffffff;
+    margin: 10px 0 5px;
+}
+
+/* info boxes */
+section {
+    width:80%;
+    height:20rem;
+    background-color: #FCDEC0;
+    border-radius: 1.5625rem;
 }
