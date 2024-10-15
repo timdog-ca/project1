@@ -7,35 +7,127 @@
     <title>Brown Squirrel Design Portfolio</title>
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico" />
+    <script src="./assets/js/scripts.js"></script>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#samples">Samples</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#facts">Squirrel Facts</a></li>
-        </ul>
-    </nav>
-    <header></header>
+    <header>
+        <nav id="navigation">
+            <div id="navimage">
+                <a href="#home"><img id="headerimg" src="./assets/img/squirrel.svg" /></a>
+            </div>
+            <div class="main-navitems" id="navitems">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#samples">Samples</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#facts">Squirrel Facts</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
     <main>
+        <section id="home">
+            <img class="businesslogo" src="./assets/img/logo_brownsquirreldesign.svg"
+                alt="logo for Brown Squirrel Design" />
+            <a href="#about" class="btnBig">Learn more</a>
+        </section>
         <section id="about">
+            <h2>about</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est consectetur earum et ad qui libero? Fugiat
+                amet fugit, magnam non ducimus consectetur neque saepe placeat in autem tenetur, corporis fuga maiores
+                aspernatur provident cumque suscipit dolorum, optio expedita ut eligendi!</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est consectetur earum et ad qui libero? Fugiat
+                amet fugit, magnam non ducimus consectetur neque saepe placeat in autem tenetur, corporis fuga maiores
+                aspernatur provident cumque suscipit dolorum, optio expedita ut eligendi!</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est consectetur earum et ad qui libero? Fugiat
+                amet fugit, magnam non ducimus consectetur neque saepe placeat in autem tenetur, corporis fuga maiores
+                aspernatur provident cumque suscipit dolorum, optio expedita ut eligendi!</p>
+
+        </section>
+
+        <section id="skills">
+            <h2>skills</h2>
+            <div class="sampleContent">
+            <div class="sampleBox"><h3>Software</h3>
+                <ul>
+                    <li>Adobe Photoshop <span class="skilllevel">- Expert</span></li>
+                    <li>Adobe Illustrator<span class="skilllevel">- Expert</span></li>
+                    <li>Adobe InDesign<span class="skilllevel">- Expert</span></li>
+                    <li>Adobe Premiere<span class="skilllevel">- Intermediate</span></li>
+                    <li>Adobe After Effects<span class="skilllevel">- Intermediate</span></li>
+                </ul>
+            </div>
+            <div class="sampleBox"><h3>Web</h3>
+                <ul>
+                    <li>HTML <span class="skilllevel">- Intermediate</span></li>
+                    <li>CSS <span class="skilllevel">- Intermediate</span></li>
+                    <li>JavaScript <span class="skilllevel">- Novice</span></li>
+                    <li>Node.js <span class="skilllevel">- Beginner</span></li>
+                    <li>Express.js <span class="skilllevel">- Beginner</span></li>
+                </ul></div>
+            </div>
         </section>
 
         <section id="samples">
-            <h1>test</h1>
+            <h2>samples</h2>
+            <div class="sampleContent">
+            <div class="sampleBox">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est consectetur earum et ad
+                qui libero? Fugiat
+                amet fugit, magnam non ducimus consectetur neque saepe placeat in autem tenetur, corporis fuga maiores
+                aspernatur provident cumque suscipit dolorum, optio expedita ut eligendi!</div>
+            <div class="sampleBox">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est consectetur earum et ad
+                qui libero? Fugiat
+                amet fugit, magnam non ducimus consectetur neque saepe placeat in autem tenetur, corporis fuga maiores
+                aspernatur provident cumque suscipit dolorum, optio expedita ut eligendi!</div>
+            <div class="sampleBox">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est consectetur earum et ad
+                qui libero? Fugiat
+                amet fugit, magnam non ducimus consectetur neque saepe placeat in autem tenetur, corporis fuga maiores
+                aspernatur provident cumque suscipit dolorum, optio expedita ut eligendi!</div>
+            </div>
         </section>
 
         <section id="contact">
+            <h2>contact</h2>
+            <form action="#" method="POST" class="formcarry-form">
+                <div class="formDetailContainer">
+                    <div class="formDetails">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="fullName" required />
+                    </div>
+                    <div class="formDetails">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+                </div>
+                <div class="formDetailContainer">
+                    <div class="formDetails">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required />
+                    </div>
+                </div>
+                <div class="formMessage">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </div>
+
+                <button type="submit">Send Message</button>
+
+            </form>
         </section>
 
         <section id="facts">
+            <h2>Squirrel Facts</h2>
+            <p id="squirrelFact">Enter Squirrel Fact Here</p>
         </section>
 
 
 
     </main>
-    <footer><h3>Brown Squirrel Design 2024</h3></footer>
+    <footer>
+        <h3>Brown Squirrel Design 2024</h3>
+    </footer>
 </body>
 
 </html>

@@ -1,42 +1,127 @@
 /* importing Bree Serif webfont from Adobe Fonts */
-@import url("https://use.typekit.net/bkw0dsg.css");
+@import url("https://use.typekit.net/fge2bmk.css");
 
 html {
-    font-size: 16px; /* set default font size for rem sizing */
+    font-size: 16px;
+    /* set default font size for rem sizing */
     font-family: "bree-serif", serif;
     height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
     height: 100%;
     margin: 0;
-    background: #557289;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #577289, #90C1D4, #90C1D4, #577289);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #577289, #90C1D4, #90\, #577289); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 100%;
+    background-color: #ffffff;
 
 }
 
-/* font settings */
-p {
+@media (min-width:1200px) {
+
+    section h2,
+    section p,
+    section p#squirrelFacts {
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    section#about p {
+        max-width: calc(900px - 400px);
+        margin-left: calc((100% - 900px)/2);
+    }
+}
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* nav bar */
+
+header {
+    width:100%;
+}
+
+header nav#navigation {
+    position: fixed;
+    left: 0;
+    top: -75px;
+    opacity: 0;
+    z-index: 999;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px 0 rgba(50, 50, 50, 0.08);
+    height: 75px;
+    min-height: 50px;
+    background-color: #ffffff;
+    transition: ease-in 0.6s;
+}
+
+header nav div#navimage a img {
+    height: 50px;
+    margin-left:100px;
+}
+
+header nav div#navitems {
+    display: flex;
+    justify-content: end;
+    margin-right:100px;
+}
+
+header nav div#navitems ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+header nav div#navitems ul li {
+    list-style-type: none;
+    margin-right: 20px;
+
+}
+
+header nav div#navitems ul li a {
     font-size: 1rem;
     font-family: "bree-serif", serif;
     font-weight: 700;
+    text-transform: uppercase;
     text-align: center;
-    color: #ffffff;
+    color: #577289;
+    text-decoration: none;
 }
 
-nav ul li {
-    list-style-type: none;
-}
+/* text setting */
 
-nav ul li a{
-    font-size: .75rem;
+p {
+    font-size: .85rem;
     font-family: "bree-serif", serif;
     font-weight: 400;
+    text-align: left;
+    color: #577289;
+}
+
+p#squirrelFact {
     text-align: center;
-    color: #ffffff;
-    text-decoration: none;
-    list-style-type: none;
+    font-size: 1em;
+    font-weight: 500;
+    font-style: italic;
 }
 
 h1 {
@@ -49,26 +134,234 @@ h1 {
 
 h2 {
     font-family: "bree-serif", serif;
-    font-weight: 400;
-    font-size: 1.125rem;
+    font-weight: 500;
+    font-size: 3rem;
     text-align: center;
     color: #875539;
-    margin: 10px 0 5px;
+    text-transform: uppercase;
+    margin: 0 0 25px;
 }
 
 h3 {
     font-family: "bree-serif", serif;
-    font-weight: 700;
-    font-size: 1rem;
+    font-weight: 500;
+    font-size: 1.25rem;
     text-align: center;
-    color: #ffffff;
-    margin: 10px 0 5px;
+    color: #fcdec0;
+    margin: 0 0 5px;
 }
 
-/* info boxes */
+.white {
+    color:#ffffff;
+}
+
+.skilllevel {
+    font-family: "bree-serif", serif;
+    font-weight: 200;
+    font-style: italic;
+    color:#D3D3D3;
+}
+
+/* imgs */
+.businesslogo {
+    width: 50%;
+    min-width: 300px;
+    max-width: 800px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+
+/* sections boxes */
+
 section {
-    width:80%;
-    height:20rem;
-    background-color: #FCDEC0;
-    border-radius: 1.5625rem;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+    width: 100%;
+}
+
+section#home {
+    color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 150px;
+    text-align: center;
+    height: 100vh;
+    background: linear-gradient(-75deg, #c68b59, #fcdec0, #c68b59);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+section#about {
+    background-color: #ffffff;
+    background: url(../img/memoji_tim.png);
+    background-size: 361px;
+    background-repeat: no-repeat;
+    background-position: left calc(50vw + 89px) bottom;
+}
+
+section#skills {
+    background-color: #fcdec0;
+}
+
+section#samples {
+    background-color: #ffffff;
+}
+
+.sampleContent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    column-gap: 35px;
+
+}
+
+.sampleBox {
+    width:300px;
+    background-color: #577289;
+    color:#ffffff;
+    padding: 20px;
+    border-radius: .75rem;
+}
+
+.sampleBox ul {
+margin:0;
+padding:0;
+}
+
+.sampleBox ul li{
+list-style-type: none;
+font-weight: 300;
+}
+
+section#contact {
+    background-color: #fcdec0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+section#facts {
+    background-color: #ffffff;
+    background: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)), url(../img/squirrel_background.png);
+    background-size: cover;
+background-position: center center;
+
+color:#ffffff;
+
+}
+
+/* footer */
+
+footer {
+    padding: 25px;
+    background-color: #875539;
+}
+
+/* buttons */
+.btnBig {
+    background: #577289;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    padding: 15px 50px;
+    -webkit-transition: all 0.6s ease-in;
+    transition: all 0.6s ease-in;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-image: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.btnBig:hover {
+    background: #fcdec0;
+    color: #577289;
+}
+
+/* form */
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+    width: 50%;
+    max-width: 500px;
+}
+
+form div.formDetailContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px 25px;
+    width: 100%;
+
+}
+
+form div.formDetailContainer div.formDetails, form div.formMessage {
+    display: flex;
+    flex-direction: column;
+    column-gap: 5px;
+    width:100%;
+}
+
+form div.formMessage {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+form div.formDetailContainer div.formDetails label, form div.formMessage label {
+    font-size: .85rem;
+    font-family: "bree-serif", serif;
+    font-weight: 700;
+    text-align: left;
+    color: #577289;
+}
+
+form div.formDetailContainer div.formDetails input, form div.formMessage textarea {
+    font-size: .85rem;
+    font-family: "bree-serif", serif;
+    font-weight: 300;
+    text-align: left;
+    color: #875539;
+}
+
+section#contact form button {
+    background: #577289;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 15px 50px;
+    margin: 15px 0 0;
+    -webkit-transition: all 0.6s ease-in;
+    transition: all 0.6s ease-in;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-image: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
