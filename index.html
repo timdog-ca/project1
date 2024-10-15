@@ -50,58 +50,65 @@
         <section id="skills">
             <h2>skills</h2>
             <div class="sampleContent">
-            <div class="sampleBox"><h3>Software</h3>
-                <ul>
-                    <li>Adobe Photoshop <span class="skilllevel">- Expert</span></li>
-                    <li>Adobe Illustrator<span class="skilllevel">- Expert</span></li>
-                    <li>Adobe InDesign<span class="skilllevel">- Expert</span></li>
-                    <li>Adobe Premiere<span class="skilllevel">- Intermediate</span></li>
-                    <li>Adobe After Effects<span class="skilllevel">- Intermediate</span></li>
-                </ul>
-            </div>
-            <div class="sampleBox"><h3>Web</h3>
-                <ul>
-                    <li>HTML <span class="skilllevel">- Intermediate</span></li>
-                    <li>CSS <span class="skilllevel">- Intermediate</span></li>
-                    <li>JavaScript <span class="skilllevel">- Novice</span></li>
-                    <li>Node.js <span class="skilllevel">- Beginner</span></li>
-                    <li>Express.js <span class="skilllevel">- Beginner</span></li>
-                </ul></div>
+                <div class="sampleBox">
+                    <h3>Software</h3>
+                    <ul>
+                        <li>Photoshop <span class="skilllevel">- Expert</span></li>
+                        <li>Illustrator<span class="skilllevel">- Expert</span></li>
+                        <li>InDesign<span class="skilllevel">- Expert</span></li>
+                        <li>Premiere<span class="skilllevel">- Intermediate</span></li>
+                        <li>After Effects<span class="skilllevel">- Intermediate</span></li>
+                    </ul>
+                </div>
+                <div class="sampleBox">
+                    <h3>Web</h3>
+                    <ul>
+                        <li>HTML <span class="skilllevel">- Intermediate</span></li>
+                        <li>CSS <span class="skilllevel">- Intermediate</span></li>
+                        <li>JavaScript <span class="skilllevel">- Novice</span></li>
+                        <li>Node.js <span class="skilllevel">- Beginner</span></li>
+                        <li>Express.js <span class="skilllevel">- Beginner</span></li>
+                    </ul>
+                </div>
             </div>
         </section>
 
         <section id="samples">
             <h2>samples</h2>
             <div class="sampleContent">
-            <div class="sampleBox">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est consectetur earum et ad
-                qui libero? Fugiat
-                amet fugit, magnam non ducimus consectetur neque saepe placeat in autem tenetur, corporis fuga maiores
-                aspernatur provident cumque suscipit dolorum, optio expedita ut eligendi!</div>
-            <div class="sampleBox">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est consectetur earum et ad
-                qui libero? Fugiat
-                amet fugit, magnam non ducimus consectetur neque saepe placeat in autem tenetur, corporis fuga maiores
-                aspernatur provident cumque suscipit dolorum, optio expedita ut eligendi!</div>
-            <div class="sampleBox">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est consectetur earum et ad
-                qui libero? Fugiat
-                amet fugit, magnam non ducimus consectetur neque saepe placeat in autem tenetur, corporis fuga maiores
-                aspernatur provident cumque suscipit dolorum, optio expedita ut eligendi!</div>
+                <div class="sampleBox">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est consectetur earum
+                    et ad
+                    qui libero? Fugiat
+                    amet fugit, magnam non ducimus consectetur neque saepe placeat in autem tenetur, corporis fuga
+                    maiores
+                    aspernatur provident cumque suscipit dolorum, optio expedita ut eligendi!</div>
+                <div class="sampleBox">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est consectetur earum
+                    et ad
+                    qui libero? Fugiat
+                    amet fugit, magnam non ducimus consectetur neque saepe placeat in autem tenetur, corporis fuga
+                    maiores
+                    aspernatur provident cumque suscipit dolorum, optio expedita ut eligendi!</div>
+                <div class="sampleBox">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est consectetur earum
+                    et ad
+                    qui libero? Fugiat
+                    amet fugit, magnam non ducimus consectetur neque saepe placeat in autem tenetur, corporis fuga
+                    maiores
+                    aspernatur provident cumque suscipit dolorum, optio expedita ut eligendi!</div>
             </div>
         </section>
 
         <section id="contact">
             <h2>contact</h2>
-            <form action="#" method="POST" class="formcarry-form">
+            <form onsubmit="return submitForm(this);" class="formcarry-form" autocomplete="on">
                 <div class="formDetailContainer">
                     <div class="formDetails">
                         <label for="name">Name</label>
-                        <input type="text" id="name" name="fullName" required />
+                        <input type="text" id="name" name="fullName" required autocomplete="name"/>
                     </div>
                     <div class="formDetails">
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required />
+                        <input type="email" id="email" name="email" required autocomplete="email"/>
                     </div>
-                </div>
-                <div class="formDetailContainer">
                     <div class="formDetails">
                         <label for="subject">Subject</label>
                         <input type="text" id="subject" name="subject" required />
@@ -113,8 +120,8 @@
                 </div>
 
                 <button type="submit">Send Message</button>
-
             </form>
+
         </section>
 
         <section id="facts">

@@ -52,7 +52,7 @@ body {
 /* nav bar */
 
 header {
-    width:100%;
+    width: 100%;
 }
 
 header nav#navigation {
@@ -74,13 +74,13 @@ header nav#navigation {
 
 header nav div#navimage a img {
     height: 50px;
-    margin-left:100px;
+    margin-left: 100px;
 }
 
 header nav div#navitems {
     display: flex;
     justify-content: end;
-    margin-right:100px;
+    margin-right: 100px;
 }
 
 header nav div#navitems ul {
@@ -152,14 +152,14 @@ h3 {
 }
 
 .white {
-    color:#ffffff;
+    color: #ffffff;
 }
 
 .skilllevel {
     font-family: "bree-serif", serif;
     font-weight: 200;
     font-style: italic;
-    color:#D3D3D3;
+    color: #D3D3D3;
 }
 
 /* imgs */
@@ -224,21 +224,21 @@ section#samples {
 }
 
 .sampleBox {
-    width:300px;
+    width: 300px;
     background-color: #577289;
-    color:#ffffff;
+    color: #ffffff;
     padding: 20px;
     border-radius: .75rem;
 }
 
 .sampleBox ul {
-margin:0;
-padding:0;
+    margin: 0;
+    padding: 0;
 }
 
-.sampleBox ul li{
-list-style-type: none;
-font-weight: 300;
+.sampleBox ul li {
+    list-style-type: none;
+    font-weight: 300;
 }
 
 section#contact {
@@ -252,11 +252,11 @@ section#contact {
 
 section#facts {
     background-color: #ffffff;
-    background: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)), url(../img/squirrel_background.png);
+    background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url(../img/squirrel_background.png);
     background-size: cover;
-background-position: center center;
+    background-position: center center;
 
-color:#ffffff;
+    color: #ffffff;
 
 }
 
@@ -298,28 +298,29 @@ footer {
 /* form */
 form {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 10px;
-    width: 50%;
-    max-width: 500px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:center;
+    align-items: top;
+    column-gap: 30px;
+    max-width: 900px;
 }
 
 form div.formDetailContainer {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 10px 25px;
+    flex-direction: column;
+    justify-content: top;
+    column-gap: 20px;
     width: 100%;
 
 }
 
-form div.formDetailContainer div.formDetails, form div.formMessage {
+form div.formDetailContainer div.formDetails,
+form div.formMessage {
     display: flex;
     flex-direction: column;
     column-gap: 5px;
-    width:100%;
+    width: 100%;
 }
 
 form div.formMessage {
@@ -328,7 +329,8 @@ form div.formMessage {
     width: 100%;
 }
 
-form div.formDetailContainer div.formDetails label, form div.formMessage label {
+form div.formDetailContainer div.formDetails label,
+form div.formMessage label {
     font-size: .85rem;
     font-family: "bree-serif", serif;
     font-weight: 700;
@@ -336,12 +338,17 @@ form div.formDetailContainer div.formDetails label, form div.formMessage label {
     color: #577289;
 }
 
-form div.formDetailContainer div.formDetails input, form div.formMessage textarea {
+form div.formDetailContainer div.formDetails input,
+form div.formMessage textarea {
     font-size: .85rem;
     font-family: "bree-serif", serif;
     font-weight: 300;
     text-align: left;
     color: #875539;
+}
+
+form div.formMessage textarea {
+    flex-grow: 8;
 }
 
 section#contact form button {
@@ -364,4 +371,10 @@ section#contact form button {
     text-decoration: none;
     text-transform: uppercase;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.flexBreak {
+    flex-basis: 100%;
+    width: 0;
+    height: 0;
 }

@@ -11,3 +11,12 @@ function showMenu() {
     document.getElementById("navigation").style.opacity = "0";
   }
 }
+
+// Send Email
+
+function submitForm(form) {
+  window.open("mailto:info@brownsquirreldesign.ca?subject=" + form.subject.value + "&body=Name:%20" + form.name.value + "%0D%0AMessage:%20" + form.message.value);
+  return false; /* cancel submit or else page reloads */
+}
+
+fetch('../data/facts.json').then().then().catch();
