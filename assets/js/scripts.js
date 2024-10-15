@@ -19,4 +19,4 @@ function submitForm(form) {
   return false; /* cancel submit or else page reloads */
 }
 
-fetch('../data/facts.json').then().then().catch();
+fetch('../assets/data/facts.json').then().then().catch();
