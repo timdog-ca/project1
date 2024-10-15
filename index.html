@@ -49,25 +49,25 @@
 
         <section id="skills">
             <h2>skills</h2>
-            <div class="sampleContent">
-                <div class="sampleBox">
+            <div class="skillContent">
+                <div class="skillBox">
                     <h3>Software</h3>
                     <ul>
-                        <li>Photoshop <span class="skilllevel">- Expert</span></li>
-                        <li>Illustrator<span class="skilllevel">- Expert</span></li>
+                        <li>Photoshop <span class="skilllevel">- Advanced</span></li>
+                        <li>Illustrator<span class="skilllevel">- Advanced</span></li>
                         <li>InDesign<span class="skilllevel">- Expert</span></li>
                         <li>Premiere<span class="skilllevel">- Intermediate</span></li>
                         <li>After Effects<span class="skilllevel">- Intermediate</span></li>
                     </ul>
                 </div>
-                <div class="sampleBox">
+                <div class="skillBox">
                     <h3>Web</h3>
                     <ul>
-                        <li>HTML <span class="skilllevel">- Intermediate</span></li>
+                        <li>HTML <span class="skilllevel">- Advanced</span></li>
                         <li>CSS <span class="skilllevel">- Intermediate</span></li>
                         <li>JavaScript <span class="skilllevel">- Novice</span></li>
-                        <li>Node.js <span class="skilllevel">- Beginner</span></li>
-                        <li>Express.js <span class="skilllevel">- Beginner</span></li>
+                        <li>Node.js <span class="skilllevel">- Fundamental Awareness</span></li>
+                        <li>Express.js <span class="skilllevel">- Fundamental Awareness</span></li>
                     </ul>
                 </div>
             </div>
@@ -76,19 +76,19 @@
         <section id="samples">
             <h2>samples</h2>
             <div class="sampleContent">
-                <div class="sampleBox">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est consectetur earum
+                <div class="sampleBox"><img class="sampleImg" src="./assets/img/samples/buttons.png"/><h3 class="blue">Buttons</h3>ipsum dolor sit amet consectetur, adipisicing elit. Est consectetur earum
                     et ad
                     qui libero? Fugiat
                     amet fugit, magnam non ducimus consectetur neque saepe placeat in autem tenetur, corporis fuga
                     maiores
                     aspernatur provident cumque suscipit dolorum, optio expedita ut eligendi!</div>
-                <div class="sampleBox">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est consectetur earum
+                <div class="sampleBox"><img class="sampleImg" src="./assets/img/samples/buttons.png"/><h3 class="blue">Buttons</h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est consectetur earum
                     et ad
                     qui libero? Fugiat
                     amet fugit, magnam non ducimus consectetur neque saepe placeat in autem tenetur, corporis fuga
                     maiores
                     aspernatur provident cumque suscipit dolorum, optio expedita ut eligendi!</div>
-                <div class="sampleBox">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est consectetur earum
+                <div class="sampleBox"><img class="sampleImg" src="./assets/img/samples/buttons.png"/><h3 class="blue">Buttons</h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est consectetur earum
                     et ad
                     qui libero? Fugiat
                     amet fugit, magnam non ducimus consectetur neque saepe placeat in autem tenetur, corporis fuga
@@ -100,7 +100,6 @@
         <section id="contact">
             <h2>contact</h2>
             <form onsubmit="return submitForm(this);" class="formcarry-form" autocomplete="on">
-                <div class="formDetailContainer">
                     <div class="formDetails">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="fullName" required autocomplete="name"/>
@@ -113,12 +112,9 @@
                         <label for="subject">Subject</label>
                         <input type="text" id="subject" name="subject" required />
                     </div>
-                </div>
-                <div class="formMessage">
+                    <div class="formDetails">
                     <label for="message">Message</label>
                     <textarea name="message" id="message" cols="30" rows="10"></textarea>
-                </div>
-
                 <button type="submit">Send Message</button>
             </form>
 

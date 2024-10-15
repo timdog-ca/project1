@@ -19,4 +19,12 @@ function submitForm(form) {
   return false; /* cancel submit or else page reloads */
 }
 
-fetch('../assets/data/facts.json').then().then().catch();
+// Load Squirrel Facts
+
+fetch('./assets/data/facts.json')
+   .then(response => response.json())
+   .then(json => console.log(JSON.stringify(json)))
+
+
+
+   
