@@ -4,14 +4,17 @@
 * {
     padding: 0;
     margin: 0;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
 }
 
 
-/* Media for mobile phones under 430px */
 
-/* Media For Larger Screens */
 
-@media (min-width:1200px) {
+/* CSS apply on width 1200px and above */
+@media only screen and (min-width: 1200px){
+
     html {
         /* set default font size for rem sizing */
         font-family: "bree-serif", serif;
@@ -133,7 +136,6 @@
     .sampleBox {
         font-weight: 300;
         width: 300px;
-        padding:20px;
         background-color: #ffffff;
         color: #555555;
     }
@@ -316,6 +318,7 @@
         margin-right: auto;
         margin-left: auto;
     }
+
 
     /* footer */
 
