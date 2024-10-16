@@ -40,13 +40,13 @@ const sqfacts = [
   {"fact":"There are 22 different species of squirrel found in Canada"}
 ];
 
-console.log(sqfacts[rndInt]);
-
 document.getElementById("squirrelfacts").innerHTML = sqfacts[rndInt].fact;
 
 
+const rndDeg = Math.floor(Math.random() * 60) + 20;
+console.log(rndDeg);
 
-
-
+document.getElementById("home").setAttribute = ("background","linear-gradient(-" + rndDeg.fact + "deg, #c68b59, #fcdec0, #c68b59);");
+console.log('linear-gradient(-' + rndDeg + 'deg, #c68b59, #fcdec0, #c68b59);');
 
 
