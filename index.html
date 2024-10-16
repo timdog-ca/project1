@@ -7,7 +7,7 @@
     <title>Brown Squirrel Design Portfolio</title>
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico" />
-    <script src="./assets/js/scripts.js"></script>
+    <script src="./assets/js/scripts.js" defer></script>
 
 <body>
     <header>
@@ -68,6 +68,7 @@
                         <li>JavaScript <span class="skilllevel">- Novice</span></li>
                         <li>Node.js <span class="skilllevel">- Fundamental Awareness</span></li>
                         <li>Express.js <span class="skilllevel">- Fundamental Awareness</span></li>
+                        <li>React.js <span class="skilllevel">- Fundamental Awareness</span></li>
                     </ul>
                 </div>
             </div>
@@ -76,60 +77,74 @@
         <section id="samples">
             <h2>samples</h2>
             <div class="sampleContent">
-                <div class="sampleBox"><img class="sampleImg" src="./assets/img/samples/buttons.png"/><h3 class="blue">Buttons</h3>ipsum dolor sit amet consectetur, adipisicing elit. Est consectetur earum
+                <div class="sampleBox"><img class="sampleImg" src="./assets/img/samples/buttons.png" />
+                    <h3 class="blue">Buttons</h3>ipsum dolor sit amet consectetur, adipisicing elit. Est consectetur
+                    earum
                     et ad
                     qui libero? Fugiat
                     amet fugit, magnam non ducimus consectetur neque saepe placeat in autem tenetur, corporis fuga
                     maiores
-                    aspernatur provident cumque suscipit dolorum, optio expedita ut eligendi!</div>
-                <div class="sampleBox"><img class="sampleImg" src="./assets/img/samples/buttons.png"/><h3 class="blue">Buttons</h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est consectetur earum
+                    aspernatur provident cumque suscipit dolorum, optio expedita ut eligendi!
+                </div>
+                <div class="sampleBox"><img class="sampleImg" src="./assets/img/samples/buttons.png" />
+                    <h3 class="blue">Business Cards</h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est
+                    consectetur earum
                     et ad
                     qui libero? Fugiat
                     amet fugit, magnam non ducimus consectetur neque saepe placeat in autem tenetur, corporis fuga
                     maiores
-                    aspernatur provident cumque suscipit dolorum, optio expedita ut eligendi!</div>
-                <div class="sampleBox"><img class="sampleImg" src="./assets/img/samples/buttons.png"/><h3 class="blue">Buttons</h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est consectetur earum
+                    aspernatur provident cumque suscipit dolorum, optio expedita ut eligendi!
+                </div>
+                <div class="sampleBox"><img class="sampleImg" src="./assets/img/samples/buttons.png" />
+                    <h3 class="blue">Websites</h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est
+                    consectetur earum
                     et ad
                     qui libero? Fugiat
                     amet fugit, magnam non ducimus consectetur neque saepe placeat in autem tenetur, corporis fuga
                     maiores
-                    aspernatur provident cumque suscipit dolorum, optio expedita ut eligendi!</div>
+                    aspernatur provident cumque suscipit dolorum, optio expedita ut eligendi!
+                </div>
             </div>
         </section>
 
         <section id="contact">
             <h2>contact</h2>
             <form onsubmit="return submitForm(this);" class="formcarry-form" autocomplete="on">
-                    <div class="formDetails">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="fullName" required autocomplete="name"/>
-                    </div>
-                    <div class="formDetails">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required autocomplete="email"/>
-                    </div>
-                    <div class="formDetails">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" required />
-                    </div>
-                    <div class="formDetails">
+                <div class="formDetails">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="fullName" required autocomplete="name" />
+                </div>
+                <div class="formDetails">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required autocomplete="email" />
+                </div>
+                <div class="formDetails">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required />
+                </div>
+                <div class="formDetails">
                     <label for="message">Message</label>
                     <textarea name="message" id="message" cols="30" rows="10"></textarea>
-                <button type="submit">Send Message</button>
+                    <button type="submit">Send Message</button>
             </form>
 
         </section>
 
         <section id="facts">
             <h2>Squirrel Facts</h2>
-            <p id="squirrelFact">Enter Squirrel Fact Here</p>
+            <p id="squirrelfacts">Text Holder</p>
         </section>
-
-
 
     </main>
     <footer>
-        <h3>Brown Squirrel Design 2024</h3>
+        <div id="socialmedias">
+            <div class="social"><a href="https://www.facebook.com/brownsquirreldesign/" target="_blank"><img src="./assets/img/logo_fb.svg" class="socialmediaimg" /></a></div>
+            <div class="social"><a href="https://www.instagram.com/brownsquirreldesign/" target="_blank"><img src="./assets/img/logo_instagram.svg" class="socialmediaimg" /></a></div>
+            <div class="social"> <a href="https://x.com/BrwnSqrlDsgn" target="_blank"><img src="./assets/img/logo_x.svg" class="socialmediaimg" /></a></div>
+            <div class="social"><img src="./assets/img/logo_linkedin.svg" class="socialmediaimg" /></div>
+            <div class="social"><a href="https://github.com/timdog-ca" target="_blank"><img src="./assets/img/logo_github.svg" class="socialmediaimg" /></a></div>
+        </div>
+        <h3 class="white">Brown Squirrel Design 2024</h3>
     </footer>
 </body>
 

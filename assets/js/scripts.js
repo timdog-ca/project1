@@ -19,12 +19,34 @@ function submitForm(form) {
   return false; /* cancel submit or else page reloads */
 }
 
-// Load Squirrel Facts
+// Squirrel Facts
 
-fetch('./assets/data/facts.json')
-   .then(response => response.json())
-   .then(json => console.log(JSON.stringify(json)))
+const rndInt = Math.floor(Math.random() * 6) + 1;
+
+const sqfacts = [
+  {"fact":"Squirrels can find food buried beneath a foot of snow."},
+  {"fact":"A squirrel's front teeth never stop growing."},
+  {"fact":"Squirrels may lose 25 percent of their buried food to thieves."},
+  {"fact":"They zigzag to escape predators."},
+  {"fact":"Squirrels may pretend to bury a nut to throw off potential thieves."},
+  {"fact":"A newborn squirrel is about an inch long."},
+  {"fact":"Humans introduced squirrels to most of our major city parks."},
+  {"fact":"Squirrels are acrobatic, intelligent, and adaptable."},
+  {"fact":"They get bulky to stay warm during the winter."},
+  {"fact":"Squirrels don't dig up all of their buried nuts, which results in more trees!"},
+  {"fact":"The Word 'Squirrel' Comes From Greek for 'Shadow Tail'"},
+  {"fact":"Only a Few Squirrels Hibernate"},
+  {"fact":"Some Ground Squirrels Make 'Rattlesnake Perfume'"},
+  {"fact":"There are 22 different species of squirrel found in Canada"}
+];
+
+console.log(sqfacts[rndInt]);
+
+document.getElementById("squirrelfacts").innerHTML = sqfacts[rndInt].fact;
 
 
 
-   
+
+
+
+
