@@ -4,28 +4,27 @@
 * {
     padding: 0;
     margin: 0;
-    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-    box-sizing: border-box;         /* Opera/IE 8+ */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+/* Extra small devices (phones below 768px) */
+@media only screen and (max-width: 768px) {
 
     html {
         /* set default font size for rem sizing */
         font-family: "bree-serif", serif;
-        font-size: 14px;
+        font-size: 12px;
         height: 100%;
-        width: 100vw;
+        min-width:320px;
         scroll-behavior: smooth;
     }
-    
+
     body {
         height: 100%;
         margin: 0;
-        width: 100vw;
         background-color: #ffffff;
     }
 
@@ -37,8 +36,8 @@
     /* sections boxes */
 
     section {
-        padding-top:100px;
-        padding-bottom:50px;
+        padding-top: 100px;
+        padding-bottom: 50px;
         text-align: center;
         width: 100%;
     }
@@ -84,11 +83,11 @@
     }
 
     .itstim {
-        width:200px;
-        margin-top:25px;
-        margin-bottom:-55px;
+        width: 200px;
+        margin-top: 25px;
+        margin-bottom: -55px;
         display: inline-block;
-        text-align:center;
+        text-align: center;
     }
 
     section#skills {
@@ -102,7 +101,7 @@
         align-items: center;
         row-gap: 35px;
         align-self: center;
-        width:100%;
+        width: 100%;
 
     }
 
@@ -112,7 +111,7 @@
         padding: 20px;
         border-radius: .75rem;
         align-self: center;
-        width:80%;
+        width: 80%;
     }
 
     .skillBox ul {
@@ -136,14 +135,14 @@
         align-items: center;
         row-gap: 35px;
         align-self: center;
-        width:100%;
+        width: 100%;
     }
 
     .sampleBox {
         font-weight: 300;
         background-color: #ffffff;
         color: #555555;
-        width:80%;
+        width: 80%;
     }
 
     .sampleBox ul {
@@ -188,11 +187,7 @@
 
     /* nav bar */
 
-    header {
-        width: 100%;
-    }
-
-    header nav#navigation {
+    nav#navigation {
         position: fixed;
         left: 0;
         top: -75px;
@@ -209,18 +204,26 @@
         transition: ease-in 0.6s;
     }
 
-    header nav div#navimage a img {
+    div#navcontainer {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        width:100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    nav div#navcontainer div#navimage a img {
         height: 50px;
-        margin-left: 100px;
     }
 
-    header nav div#navitems {
-        display: flex;
-        justify-content: end;
-        margin-right: 100px;
+    nav div#navcontainer div#navitems {
+        display: none;
     }
 
-    header nav div#navitems ul {
+    nav div#navcontainer div#navitems ul {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -228,17 +231,12 @@
         width: 100%;
     }
 
-    header nav div#navitems ul li {
+    nav div#navcontainer div#navitems ul li {
         list-style-type: none;
         margin-right: 20px;
-
     }
 
-    header nav div#navitems ul li.active a {
-        color:#875539;
-    }
-
-    header nav div#navitems ul li a {
+    nav div#navcontainer div#navitems ul li a {
         font-size: 1rem;
         font-family: "bree-serif", serif;
         font-weight: 700;
@@ -246,6 +244,33 @@
         text-align: center;
         color: #577289;
         text-decoration: none;
+    }
+
+    nav div#navcontainer div#navitems ul li.active a {
+        color: #875539;
+    }
+
+    nav div#navcontainer div#mobilemenu {
+        margin:0;
+        padding:0;
+    }
+
+    nav div#navcontainer div#mobilemenu button {
+        border: none;
+        background-color: transparent;
+    }   
+
+    nav div#navcontainer div#mobilemenu button .icon-bar {
+        background: #577289;
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+    }
+
+    nav div#navcontainer div#mobilemenu button .icon-bar:last-child {
+        margin-bottom: 0;
     }
 
     /* text setting */
@@ -256,8 +281,16 @@
         font-weight: 400;
         text-align: left;
         color: #555555;
-        margin-right:20px;
-        margin-left:20px;
+        margin: 0 20px 10px;
+    }
+
+    p.sampletext {
+        font-size: .85rem;
+        font-family: "bree-serif", serif;
+        font-weight: 400;
+        text-align: center;
+        color: #555555;
+        margin: 0;
     }
 
     p#squirrelfacts {
@@ -266,6 +299,7 @@
         font-weight: 500;
         font-style: italic;
         color: #577289;
+        margin: 0 20px;
     }
 
     h1 {
@@ -364,7 +398,8 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 
-    .btnBig:hover, .btnBig:active {
+    .btnBig:hover,
+    .btnBig:active {
         box-shadow: rgba(0, 0, 0, 0.85) 0px 5px 15px;
     }
 
@@ -439,22 +474,21 @@
 
 }
 
-/* Extra small devices (tablets and large phones, 600px abd up) */
-@media only screen and (min-width: 600px){
+
+/* CSS apply on width 768px to 991 */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
 
     html {
         /* set default font size for rem sizing */
         font-family: "bree-serif", serif;
         font-size: 16px;
         height: 100%;
-        width: 100vw;
         scroll-behavior: smooth;
     }
 
     body {
-        height: 100%;
         margin: 0;
-        width: 100vw;
+        padding: 0;
         background-color: #ffffff;
     }
 
@@ -469,7 +503,6 @@
     section {
         padding-top: 100px;
         padding-bottom: 100px;
-        text-align: center;
         width: 100%;
     }
 
@@ -511,14 +544,9 @@
 
     section#about {
         background-color: #ffffff;
-        background: url(../img/memoji_tim.png);
-        background-size: 361px;
-        background-repeat: no-repeat;
-        background-position: left calc(50vw + 89px) bottom;
-    }
-
-    .itstim {
-        display:none;
+        padding-bottom: 0;
+        margin-bottom: -5px;
+        text-align: center;
     }
 
     section#skills {
@@ -531,15 +559,16 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 35px;
-
     }
 
     .skillBox {
-        width: 300px;
+        width: 40%;
         background-color: #577289;
         color: #ffffff;
         padding: 20px;
         border-radius: .75rem;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        text-align: center;
     }
 
     .skillBox ul {
@@ -561,29 +590,20 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
         gap: 35px;
+
     }
 
     .sampleBox {
         font-weight: 300;
-        width: 300px;
+        width: 40%;
         background-color: #ffffff;
         color: #555555;
     }
 
-    .sampleBox ul {
-        margin: 0;
-        padding: 0;
-    }
-
-    .sampleBox ul li {
-        list-style-type: none;
-        font-weight: 300;
-    }
-
     .sampleImg {
-        margin:0;
+        margin: 0;
+        width:100%;
         border-radius: 1rem;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         margin-bottom: 10px;
@@ -613,11 +633,7 @@
 
     /* nav bar */
 
-    header {
-        width: 100%;
-    }
-
-    header nav#navigation {
+    nav#navigation {
         position: fixed;
         left: 0;
         top: -75px;
@@ -634,18 +650,22 @@
         transition: ease-in 0.6s;
     }
 
-    header nav div#navimage a img {
+    div#navcontainer {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        width:100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    nav div#navcontainer div#navimage a img {
         height: 50px;
-        margin-left: 100px;
     }
 
-    header nav div#navitems {
-        display: flex;
-        justify-content: end;
-        margin-right: 100px;
-    }
-
-    header nav div#navitems ul {
+    nav div#navcontainer div#navitems ul {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -653,13 +673,12 @@
         width: 100%;
     }
 
-    header nav div#navitems ul li {
+    nav div#navcontainer div#navitems ul li {
         list-style-type: none;
         margin-right: 20px;
-
     }
 
-    header nav div#navitems ul li a {
+    nav div#navcontainer div#navitems ul li a {
         font-size: 1rem;
         font-family: "bree-serif", serif;
         font-weight: 700;
@@ -669,18 +688,28 @@
         text-decoration: none;
     }
 
-    header nav div#navitems ul li.active a {
-        color:#875539;
+    nav div#navcontainer div#navitems ul li.active a {
+        color: #875539;
     }
 
     /* text setting */
 
     p {
-        font-size: .85rem;
+        font-size: 1rem;
         font-family: "bree-serif", serif;
         font-weight: 400;
         text-align: left;
         color: #555555;
+        margin: 0 40px 10px;
+    }
+
+    p.sampletext {
+        font-size: 1rem;
+        font-family: "bree-serif", serif;
+        font-weight: 400;
+        text-align: center;
+        color: #555555;
+        margin: 0;
     }
 
     p#squirrelfacts {
@@ -689,6 +718,7 @@
         font-weight: 500;
         font-style: italic;
         color: #577289;
+        margin: 0 20px;
     }
 
     h1 {
@@ -723,19 +753,6 @@
         font-weight: 200;
         font-style: italic;
         color: #D3D3D3;
-    }
-
-    section h2,
-    section p,
-    section p#squirrelFacts {
-        max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    section#about p {
-        max-width: calc(900px - 400px);
-        margin-left: calc((100% - 900px)/2);
     }
 
     .white {
@@ -813,8 +830,7 @@
         flex-direction: column;
         justify-content: flex-start;
         row-gap: 10px;
-        width: 80%;
-        max-width: 700px;
+        width: 600px;
     }
 
     form div.formDetails {
@@ -884,23 +900,20 @@
 
 }
 
-
-/* CSS apply on width 1200px and above */
-@media only screen and (min-width: 1200px){
+/* CSS apply on width 992px to 1199 */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
 
     html {
         /* set default font size for rem sizing */
         font-family: "bree-serif", serif;
         font-size: 16px;
         height: 100%;
-        width: 100vw;
         scroll-behavior: smooth;
     }
 
     body {
-        height: 100%;
         margin: 0;
-        width: 100vw;
+        padding: 0;
         background-color: #ffffff;
     }
 
@@ -915,7 +928,6 @@
     section {
         padding-top: 100px;
         padding-bottom: 100px;
-        text-align: center;
         width: 100%;
     }
 
@@ -957,14 +969,9 @@
 
     section#about {
         background-color: #ffffff;
-        background: url(../img/memoji_tim.png);
-        background-size: 361px;
-        background-repeat: no-repeat;
-        background-position: left calc(50vw + 89px) bottom;
-    }
-
-    .itstim {
-        display:none;
+        padding-bottom: 0;
+        margin-bottom: -5px;
+        text-align: center;
     }
 
     section#skills {
@@ -974,18 +981,19 @@
     .skillContent {
         display: flex;
         flex-direction: row;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         justify-content: center;
-        column-gap: 35px;
-
+        gap: 35px;
     }
 
     .skillBox {
-        width: 300px;
+        width: 40%;
         background-color: #577289;
         color: #ffffff;
         padding: 20px;
         border-radius: .75rem;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        text-align: center;
     }
 
     .skillBox ul {
@@ -1005,31 +1013,23 @@
     .sampleContent {
         display: flex;
         flex-direction: row;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         justify-content: center;
-        column-gap: 35px;
+        gap: 35px;
 
     }
 
     .sampleBox {
         font-weight: 300;
-        width: 300px;
+        width: 40%;
         background-color: #ffffff;
         color: #555555;
-    }
-
-    .sampleBox ul {
-        margin: 0;
-        padding: 0;
-    }
-
-    .sampleBox ul li {
-        list-style-type: none;
-        font-weight: 300;
+        text-align: center;
     }
 
     .sampleImg {
-        margin:0;
+        margin: 0;
+        width:70%;
         border-radius: 1rem;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         margin-bottom: 10px;
@@ -1059,11 +1059,7 @@
 
     /* nav bar */
 
-    header {
-        width: 100%;
-    }
-
-    header nav#navigation {
+    nav#navigation {
         position: fixed;
         left: 0;
         top: -75px;
@@ -1080,18 +1076,22 @@
         transition: ease-in 0.6s;
     }
 
-    header nav div#navimage a img {
+    div#navcontainer {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        width:100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    nav div#navcontainer div#navimage a img {
         height: 50px;
-        margin-left: 100px;
     }
 
-    header nav div#navitems {
-        display: flex;
-        justify-content: end;
-        margin-right: 100px;
-    }
-
-    header nav div#navitems ul {
+    nav div#navcontainer div#navitems ul {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -1099,13 +1099,12 @@
         width: 100%;
     }
 
-    header nav div#navitems ul li {
+    nav div#navcontainer div#navitems ul li {
         list-style-type: none;
         margin-right: 20px;
-
     }
 
-    header nav div#navitems ul li a {
+    nav div#navcontainer div#navitems ul li a {
         font-size: 1rem;
         font-family: "bree-serif", serif;
         font-weight: 700;
@@ -1115,18 +1114,28 @@
         text-decoration: none;
     }
 
-    header nav div#navitems ul li.active a {
-        color:#875539;
+    nav div#navcontainer div#navitems ul li.active a {
+        color: #875539;
     }
 
     /* text setting */
 
     p {
-        font-size: .85rem;
+        font-size: 1rem;
         font-family: "bree-serif", serif;
         font-weight: 400;
         text-align: left;
         color: #555555;
+        margin: 0 60px 10px;
+    }
+
+    p.sampletext {
+        font-size: 1rem;
+        font-family: "bree-serif", serif;
+        font-weight: 400;
+        text-align: center;
+        color: #555555;
+        margin: 0;
     }
 
     p#squirrelfacts {
@@ -1135,6 +1144,7 @@
         font-weight: 500;
         font-style: italic;
         color: #577289;
+        margin: 0 20px;
     }
 
     h1 {
@@ -1171,17 +1181,430 @@
         color: #D3D3D3;
     }
 
-    section h2,
-    section p,
-    section p#squirrelFacts {
-        max-width: 900px;
-        margin-left: auto;
-        margin-right: auto;
+    .white {
+        color: #ffffff;
     }
 
-    section#about p {
-        max-width: calc(900px - 400px);
-        margin-left: calc((100% - 900px)/2);
+    .blue {
+        color: #577289;
+    }
+
+    /* imgs */
+    .businesslogo {
+        width: 50%;
+        min-width: 300px;
+        max-width: 800px;
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+
+    /* footer */
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 25px;
+        padding: 25px;
+        background-color: #577289;
+    }
+
+    div#socialmedias {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 35px;
+        margin: 2rem 0;
+        max-width: 900px;
+    }
+
+    /* buttons */
+    .btnBig {
+        background: #577289;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        font-size: 20px;
+        font-weight: 700;
+        margin: 0;
+        padding: 15px 50px;
+        -webkit-transition: all 0.6s ease-in;
+        transition: all 0.6s ease-in;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        background-image: none;
+        border: 1px solid transparent;
+        cursor: pointer;
+        text-decoration: none;
+        text-transform: uppercase;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    .btnBig:hover {
+        background: #90c1d4;
+        color: #577289;
+    }
+
+    /* form */
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: flex-start;
+        row-gap: 10px;
+        width: 600px;
+    }
+
+    form div.formDetails {
+        display: flex;
+        flex-direction: column;
+        column-gap: 5px;
+        width: 100%;
+    }
+
+    form div.formDetails label {
+        font-size: 1rem;
+        font-family: "bree-serif", serif;
+        font-weight: 500;
+        text-align: left;
+        color: #577289;
+    }
+
+    form div.formDetails input {
+        font-size: 1rem;
+        height: 2rem;
+        font-family: "bree-serif", serif;
+        font-weight: 300;
+        text-align: left;
+        color: #875539;
+        border: 1px solid #577289;
+        border-radius: .375rem;
+    }
+
+    form div.formDetails textarea {
+        font-size: 1rem;
+        height: 8rem;
+        font-family: "bree-serif", serif;
+        font-weight: 300;
+        text-align: left;
+        color: #875539;
+        border: 1px solid #577289;
+        border-radius: .375rem;
+    }
+
+    section#contact form button {
+        align-self: center;
+        background: #577289;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: 700;
+        padding: 15px 50px;
+        margin: 25px 0 0;
+        -webkit-transition: all 0.6s ease-in;
+        transition: all 0.6s ease-in;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        background-image: none;
+        border: 1px solid transparent;
+        cursor: pointer;
+        text-decoration: none;
+        text-transform: uppercase;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    section#contact form button:hover {
+        background: #90c1d4;
+        color: #577289;
+    }
+
+}
+
+/* CSS apply on width 1200px and above */
+@media only screen and (min-width: 1200px) {
+
+    html {
+        /* set default font size for rem sizing */
+        font-family: "bree-serif", serif;
+        font-size: 18px;
+        height: 100%;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+    }
+
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* sections boxes */
+
+    section {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        width: 100%;
+    }
+
+    section:first-child {
+        padding-top: 0;
+        padding-bottom: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    section#home {
+        color: #ffffff;
+        display: flex;
+        flex-wrap: unset;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 150px;
+        text-align: center;
+        height: 100vh;
+        background: linear-gradient(-75deg, #c68b59, #fcdec0, #c68b59);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+    }
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    section#about {
+        background-color: #ffffff;
+        padding-bottom: 0;
+        margin-bottom: -5px;
+        text-align: center;
+    }
+
+    section#skills {
+        background-color: #fcdec0;
+    }
+
+    .skillContent {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 35px;
+    }
+
+    .skillBox {
+        width: 40%;
+        background-color: #577289;
+        color: #ffffff;
+        padding: 20px;
+        border-radius: .75rem;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        text-align: center;
+    }
+
+    .skillBox ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .skillBox ul li {
+        list-style-type: none;
+        font-weight: 300;
+    }
+
+    section#samples {
+        background-color: #ffffff;
+    }
+
+    .sampleContent {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 35px;
+
+    }
+
+    .sampleBox {
+        font-weight: 300;
+        width: 40%;
+        background-color: #ffffff;
+        color: #555555;
+        text-align: center;
+    }
+
+    .sampleImg {
+        margin: 0;
+        width:70%;
+        border-radius: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin-bottom: 10px;
+    }
+
+    section#contact {
+        background-color: #fcdec0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    section#facts {
+        text-align: center;
+        background-color: #ffffff;
+        background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url(../img/squirrel_background.png);
+        background-size: cover;
+        background-position: center center;
+        color: #ffffff;
+    }
+
+    .socialmediaimg {
+        width: 40px;
+    }
+
+    /* nav bar */
+
+    nav#navigation {
+        position: fixed;
+        left: 0;
+        top: -75px;
+        opacity: 0;
+        z-index: 999;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 8px 0 rgba(50, 50, 50, 0.08);
+        height: 75px;
+        min-height: 50px;
+        background-color: #ffffff;
+        transition: ease-in 0.6s;
+    }
+
+    div#navcontainer {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        width:100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    nav div#navcontainer div#navimage a img {
+        height: 50px;
+    }
+
+    nav div#navcontainer div#navitems ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    nav div#navcontainer div#navitems ul li {
+        list-style-type: none;
+        margin-right: 20px;
+    }
+
+    nav div#navcontainer div#navitems ul li a {
+        font-size: 1rem;
+        font-family: "bree-serif", serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+        color: #577289;
+        text-decoration: none;
+    }
+
+    nav div#navcontainer div#navitems ul li.active a {
+        color: #875539;
+    }
+
+    /* text setting */
+
+    p {
+        font-size: 1rem;
+        font-family: "bree-serif", serif;
+        font-weight: 400;
+        text-align: left;
+        color: #555555;
+        margin: 0 60px 10px;
+    }
+
+    p.sampletext {
+        font-size: 1rem;
+        font-family: "bree-serif", serif;
+        font-weight: 400;
+        text-align: center;
+        color: #555555;
+        margin: 0;
+    }
+
+    p#squirrelfacts {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 500;
+        font-style: italic;
+        color: #577289;
+        margin: 0 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        font-family: "bree-serif", serif;
+        font-weight: 700;
+        text-align: center;
+        color: #ffffff;
+    }
+
+    h2 {
+        font-family: "bree-serif", serif;
+        font-weight: 500;
+        font-size: 3rem;
+        text-align: center;
+        color: #875539;
+        text-transform: uppercase;
+        margin: 0 0 25px;
+    }
+
+    h3 {
+        font-family: "bree-serif", serif;
+        font-weight: 500;
+        font-size: 1.25rem;
+        text-align: center;
+        color: #fcdec0;
+        margin: 0 0 5px;
+    }
+
+    .skilllevel {
+        font-family: "bree-serif", serif;
+        font-weight: 200;
+        font-style: italic;
+        color: #D3D3D3;
     }
 
     .white {

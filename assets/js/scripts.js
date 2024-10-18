@@ -36,7 +36,7 @@ document.getElementById("home").setAttribute = ("background","linear-gradient(-"
 
 // hightlight active menu item
 const sections = document.querySelectorAll('section');
-const navli = document.querySelectorAll('header nav .main-navitems ul li');
+const navli = document.querySelectorAll('nav .main-navitems ul li');
 
 window.addEventListener("scroll", () => {
 
